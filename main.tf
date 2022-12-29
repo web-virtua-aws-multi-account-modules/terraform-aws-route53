@@ -6,7 +6,7 @@ locals {
   }
 
   records_normalized = flatten([
-    for record in var.records : [
+    for record in var.records != null ? var.records : [] : [
       {
         zone_id                          = var.set_one_zone_id_all_records != null ? var.set_one_zone_id_all_records : record.zone_id
         name                             = record.name

@@ -65,7 +65,7 @@ variable "ou_name" {
 }
 
 variable "tags" {
-  description = "Tags to EC2 instance"
+  description = "Tags to Route53"
   type        = map(any)
   default     = {}
 }
